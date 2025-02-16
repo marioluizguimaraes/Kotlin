@@ -18,9 +18,12 @@ class MutableStack<E>(vararg items: E){
     }
 
     override fun toString(): String {
-        return "MutableStack(${elements.joinToString()}"
+        return "MutableStack: ${elements.joinToString()}"
     }
 }
 fun main() {
-
+    val myStack = MutableStack(0, 1,0.1,2,76,100)
+    myStack.push(10)
+    println("último elemento: ${myStack.peek()}")
+    println(myStack)
 }
